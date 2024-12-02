@@ -1,0 +1,5 @@
+Para hacer registro de personas:
+
+http://localhost/Registro/registro.php
+
+http://localhost/phpmyadmin
