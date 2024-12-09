@@ -6,9 +6,9 @@ import threading
 from datetime import datetime
 
 # Configuración
-archivo_usuarios = "./Proyecto_completo/usuarios.csv"
-archivo_eventos = "./Proyecto_completo/eventos.csv"
-archivo_ultrasonico = "./Proyecto_completo/ultrasonico.csv"
+archivo_usuarios = "./usuarios.csv"
+archivo_eventos = "./eventos.csv"
+archivo_ultrasonico = "./ultrasonico.csv"
 puerto_arduino_uno = "COM5"  # Puerto del Arduino Uno
 puerto_arduino_mega = "COM6"  # Puerto del Arduino Mega
 baudrate = 9600
