@@ -4,11 +4,23 @@ from tkinter import messagebox
 import serial
 import threading
 from datetime import datetime
+import os
 
 # Configuración
-archivo_usuarios = "./usuarios.csv"
-archivo_eventos = "./eventos.csv"
-archivo_ultrasonico = "./ultrasonico.csv"
+# archivo_usuarios = os.path.dirname(__file__)+"/usuarios.csv"
+# archivo_eventos = "eventos.csv"
+# archivo_ultrasonico = "ultrasonico.csv"
+
+ruta_base = os.path.dirname(os.path.abspath(__file__))  # Obtiene la ruta del script actual
+carpeta_datos = os.path.join(ruta_base, "datos")  # Define la carpeta "datos"
+archivo_usuarios = os.path.join(carpeta_datos, "usuarios.csv")  # Ruta completa al archivo
+archivo_eventos = os.path.join(carpeta_datos, "eventos.csv")
+archivo_ultrasonico = os.path.join(carpeta_datos, "ultrasonico.csv")
+# Crear la carpeta "datos" si no existe
+if not os.path.exists(carpeta_datos):
+    os.makedirs(carpeta_datos)
+
+
 puerto_arduino_uno = "COM5"  # Puerto del Arduino Uno
 puerto_arduino_mega = "COM6"  # Puerto del Arduino Mega
 baudrate = 9600
